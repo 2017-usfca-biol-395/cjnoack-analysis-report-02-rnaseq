@@ -1,6 +1,6 @@
 ---
 title: "Analysis Report 2: Your Title Here"
-author: "Don Francisco"
+author: "Chelsea Noack"
 date: "November 10, 2017"
 output: github_document
 bibliography: references.bib
@@ -25,8 +25,11 @@ Li et al. (2015) downloaded Seo et al.'s RNAseq data from GEO, Gene Expression O
 
 ## Computational
 
-250 words. 
-Biomartr, trimmomatic, sailfish.
+First, Dr. Napauka Zimmerman downloaded the files from the NCBI Sequence Read archive under the study number ERP001058. Downloaded the extensive amount of data was made easier by the BioMartr package. Biomartr is a package in CRAN which helps retrieve metagenomic data and functional annotation retrieval. It is more polished than NCBI. Next, the files were converted from SRA to fastq. 
+
+Because the files were so massive, Zimmerman had to use Sailfish. Sailfish is a package which quantifies the abundance of previously annotated RNA isoforms from RNA-seq data, and in doing so avoids mapping reads [@patro2014sailfish]. This makes it 20 times faster than alternative methods and still maintains a level of accuracy. This is ideal for processing large amounts of sequencing reads. Once the files were processed, they were put through fastQC, a quality checking program, which eliminated many reads which were very low quality. The QC reports are helpful to see how viable each sequence is for analysis; if the majority of the sequence is above a 30 score, then we consider it to be sequenced well. Typically, the 3' end will deteriorate, which is normal. 
+
+The next step was to put the files through paired-end Trimmomatic. Specifically, it clipped off Illumina adapters and any reads with a quality score less than 20. The trimmed, quality-checked sequences then needed to be aligned. Sailfish efficiently aligned the sequences using k-mers.  As mentioned before, Sailfish is fast; each sample is parsed out. 88 cores were used in an overnight run. Finally, with parsed sequences efficiently aligned, Zimmerman built the tables. Within our table, each row is a human gene name and the column is different samples in all the groups. The table was melted so it included the metadata and original data. Dplyr and ggplot help us analyze the data from the melted tables. 
 
 # Results
 
