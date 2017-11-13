@@ -17,11 +17,16 @@ Add about 1 page here. Must cite at least 5 peer reviewed articles.
 
 ## Sample origin and sequencing
 
-Add about half a page here. In this section instead of first person (I/we), use Li et al. [@li2015rna] and Seo et al. [@seo2012transcriptional], since you'll just be describing what they did, based on the methods in their paper(s). It's important to include this so the reader knows what the study design was for the data you will be presenting.
+The data comes from Seo et al.'s 2012 paper *The transcriptional landscape and mutational profile of lung adenocarcinoma*. Seo et al. took fresh surgical samples of normal and cancerous tissues from  200 Korean patients. The patients had primary lung adenocarcinoma and recently underwent lung resection. For their transcriptional study between smokers and non-smokers, which pertains to Li et al.'s study, they used about 70 of those 200 samples. The samples were normal and cancerous tissues from 34 smokers and 34 never-smokers. Within the smoking category was current smoking and those whom have smoked. They also recorded gender, cancer stage, and smoking status from the patients [@seo2012transcriptional]. 
+
+To sequence the samples, they did transcriptome sequencing combine with whole-exome and transcriptome sequencing. Transcriptome sequencing has a past history of detecting somatic mutations in cancer. The combination made their study the first large scale-study of lung adenocarcinoma using RNA sequencing [@seo2012transcriptional]. 
+
+Li et al. (2015) downloaded Seo et al.'s RNAseq data from GEO, Gene Expression Omnibus. In doing so, they could perform a comprehensive pair-wise comparison analysis. From the data, they had 14 billion paired-end sequence reads ranging to 101 bp in length [@li2015rna].  They excluded the data from any patients under the age of 75 for better comparison. Once they confirmed a paired-nature of the RNA-seq data of normal vs. tumor tissue, they used Ensembl GRCh37 Tophat to align the reads to the human genome. To count the reads by genes, they used HTSeq [@li2015rna]. For the differential gene expression analysis, they used R Bioconductor edgeR. Next, Li et al. had to filter the data. Genes with 1 count per million (cpm) in atleast half the sample size were included. From there, we took their edited and filtered data for our analysis. 
 
 ## Computational
 
-These are the methods that were used to process the sequencing data. Should probably be at least a half of a page. At a very minimum should include citations for biomartr, trimmomatic, and sailfish. Note that these three methods references don't count towards the five references you need to cite in the introduction.
+250 words. 
+Biomartr, trimmomatic, sailfish.
 
 # Results
 
@@ -76,7 +81,10 @@ top_15 %>%
   kable()
 ```
 
+**Figure 1**
+
 ```{r make-boxplot-of-highly-expressed-genes, echo = FALSE}
+# Comment here
 # here we just want to pull out the unique gene names and turn
 # them into a vector so we can use it below to make a boxplot
 # we use the pull() funtion to get this as a vector, just like
@@ -86,14 +94,10 @@ top_genes <- top_15 %>%
   select(genename) %>%
   unique() %>%
   pull()
-
-# now we need to filter from the full data set again, because
-# we don't just want summary data, we want all the data in
-# order to make boxplots
 final_table %>%
   filter(genename %in% top_genes) %>%
-  ggplot(aes(x = genename,
-             y = counts_lengthscaledtpm,
+  ggplot(aes(x = cancer_stage,
+             y = age_at_diagnosis,
              fill = gender)) +
     geom_boxplot() +
     facet_wrap(~cancer_stage) +
