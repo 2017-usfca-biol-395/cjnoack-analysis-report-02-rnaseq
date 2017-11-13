@@ -84,38 +84,6 @@ top_15 %>%
   kable()
 ```
 
-**Figure 1**
-
-```{r make-boxplot-of-highly-expressed-genes, echo = FALSE}
-# Comment here
-# here we just want to pull out the unique gene names and turn
-# them into a vector so we can use it below to make a boxplot
-# we use the pull() funtion to get this as a vector, just like
-# we did when making histograms several weeks ago
-top_genes <- top_15 %>%
-  ungroup() %>%
-  select(genename) %>%
-  unique() %>%
-  pull()
-final_table %>%
-  filter(genename %in% top_genes) %>%
-  ggplot(aes(x = cancer_stage,
-             y = age_at_diagnosis,
-             fill = gender)) +
-    geom_boxplot() +
-    facet_wrap(~cancer_stage) +
-    xlab("Gene Name") +
-    ylab("Scaled read counts per gene") +
-    ggtitle("Read counts per gene by gender and cancer stage") +
-    theme_bw() + # simplifies theme
-    theme(axis.text.x = # rotates x axis labels vertically
-            element_text(angle = 90,
-                         hjust = 1))
-```
-
-
-
-
 **Table 1**: The most highly expressed genes in both genders included *SFTPB* and *EEF1A1*.
 
 ```{r make-barplot-of-highly-expressed-genes, echo = FALSE}
@@ -148,13 +116,13 @@ top_genes <- top_15 %>%
 final_table %>%
   filter(genename %in% top_genes) %>%
   ggplot(aes(x = genename,
-             y = counts_lengthscaledtpm,
+             y = age_at_diagnosis,
              fill = gender)) +
     geom_boxplot() +
     facet_wrap(~cancer_stage) +
     xlab("Gene Name") +
-    ylab("Scaled read counts per gene") +
-    ggtitle("Read counts per gene by gender and cancer stage") +
+    ylab("Age of diagnosis per gene") +
+    ggtitle("Age of diagnosis per gene by gender and cancer stage") +
     theme_bw() + # simplifies theme
     theme(axis.text.x = # rotates x axis labels vertically
             element_text(angle = 90,
@@ -164,6 +132,8 @@ final_table %>%
 **Figure 2**: Here we show another example figure caption.
 
 # Discussion
+
+1-2 pages is 500 to 1,000 words. 
 
 Add around 1-2 pages interpreting your results and considering future directions one might take in analyzing these data.
 
