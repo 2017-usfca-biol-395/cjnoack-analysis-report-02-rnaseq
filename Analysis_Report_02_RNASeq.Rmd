@@ -91,9 +91,9 @@ top_15 %>%
 # barplot - remember geom_col() is just like
 # when you use geom_bar(stat = "identity")
 top_15 %>%
-  ggplot(aes(x = genename,
+  ggplot(aes(x = gender,
              y = mean_count,
-             fill = gender)) +
+             fill = genename)) +
     geom_col(position = "dodge")
 ```
 
@@ -130,6 +130,42 @@ final_table %>%
 ```
 
 **Figure 2**: Here we show another example figure caption.
+
+```{r tester plot, echo=FALSE}
+# here we just want to pull out the unique gene names and turn
+# them into a vector so we can use it below to make a boxplot
+# we use the pull() funtion to get this as a vector, just like
+# we did when making histograms several weeks ago
+top_genes <- top_15 %>%
+  ungroup() %>%
+  select(genename) %>%
+  unique() %>%
+  pull()
+
+# now we need to filter from the full data set again, because
+# we don't just want summary data, we want all the data in
+# order to make boxplots
+final_table %>%
+  filter(genename %in% top_genes) %>%
+  ggplot(aes(x = age_at_diagnosis,
+             y = gender,
+             fill = age_at_diagnosis,) +
+           geom_line(aes(38, 85, group=ID, colour=ID))
+    geom_boxplot() +
+    facet_wrap(~cancer_stage) +
+    xlab("Gene Name") +
+    ylab("Age of diagnosis per gene") +
+    ggtitle("Age of diagnosis per gene by gender and cancer stage") +
+    theme_bw() + # simplifies theme
+    theme(axis.text.x = # rotates x axis labels vertically
+            element_text(angle = 90,
+                         hjust = 1))
+```
+
+```{r anothertest}
+p <- ggplot(data = final_table, mapping = aes(age_at_diagnosis, cancer_stage))
+p + geom_point(aes(color = gender)) + geom_smooth()
+````
 
 # Discussion
 
