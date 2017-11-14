@@ -147,15 +147,20 @@ age_30 %>%
   kable()
 ```
 
+**Table 2**: Mean age for different cancer stages in men and women. 
 
-```{r tester plot, echo=FALSE}
-
+```{r make-barplot-of-highly-expressed-genes, echo = FALSE}
+# this code uses the same data as above, but use it to make a
+# barplot - remember geom_col() is just like
+# when you use geom_bar(stat = "identity")
+age_30 %>%
+  ggplot(aes(x = gender,
+             y = mean_age,
+             fill = cancer_stage)) +
+    geom_col(position = "dodge")
 ```
 
-```{r anothertest}
-p <- ggplot(data = age_30, mapping = aes(mean_age, cancer_stage))
-p + geom_point(aes(color = gender)) + geom_smooth()
-````
+**Figure 3**: Seeing how it goes.
 
 # Discussion
 
