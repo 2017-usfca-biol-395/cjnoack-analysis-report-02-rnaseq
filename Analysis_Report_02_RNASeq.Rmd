@@ -11,6 +11,10 @@ csl: bioinformatics.csl
 
 # Introduction
 
+Smoking....
+
+Is there a genetic component making females more prone to lung adenocarcinoma than males? I hypothesize given previous data that younger females and males will have cases of later stage cancer while those who do or previously smoked will show more recent stages.  
+
 Add about 1 page here. Must cite at least 5 peer reviewed articles.
 
 # Methods
@@ -178,7 +182,7 @@ smoke_30 %>%
   kable()
 ```
 
-**Table 3**: Another table
+**Table 3**: Mean smoking age compared with smoking status, gender, and cancer stage. We see primarily older females having stage 1A while younger females have stage 4, which is odd/surprising. Meanwhile, we see older males having 3A and younger males having 3B, making them closer in range than females. 
 
 # Discussion
 
