@@ -162,6 +162,24 @@ age_30 %>%
 
 **Figure 3**: Seeing how it goes.
 
+```{r make-summary-table, echo = FALSE}
+# There are many many genes in this dataset, so we can
+# subset it down to just a few here to look for interesting patterns
+# in the most highly expressed
+smoke_30 <- final_table %>%
+  group_by(smoking_status, gender, cancer_stage) %>%
+  summarize(mean_smoke = mean(age_at_diagnosis)) %>%
+  arrange(desc(mean_smoke)) %>%
+  head(n = 30)
+
+# then we can use the `kable()` function to make a nicely formatted
+# markdown table
+smoke_30 %>%
+  kable()
+```
+
+**Table 3**: Another table
+
 # Discussion
 
 1-2 pages is 500 to 1,000 words. 
