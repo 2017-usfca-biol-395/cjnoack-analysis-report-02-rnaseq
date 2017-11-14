@@ -131,39 +131,29 @@ final_table %>%
 
 **Figure 2**: Here we show another example figure caption.
 
-```{r tester plot, echo=FALSE}
-# here we just want to pull out the unique gene names and turn
-# them into a vector so we can use it below to make a boxplot
-# we use the pull() funtion to get this as a vector, just like
-# we did when making histograms several weeks ago
-top_genes <- top_15 %>%
-  ungroup() %>%
-  select(genename) %>%
-  unique() %>%
-  pull()
+```{r make-summary-table, echo = FALSE}
+# There are many many genes in this dataset, so we can
+# subset it down to just a few here to look for interesting patterns
+# in the most highly expressed
+age_30 <- final_table %>%
+  group_by(cancer_stage, gender) %>%
+  summarize(mean_age = mean(age_at_diagnosis)) %>%
+  arrange(desc(mean_age)) %>%
+  head(n = 30)
 
-# now we need to filter from the full data set again, because
-# we don't just want summary data, we want all the data in
-# order to make boxplots
-final_table %>%
-  filter(genename %in% top_genes) %>%
-  ggplot(aes(x = age_at_diagnosis,
-             y = gender,
-             fill = age_at_diagnosis,) +
-           geom_line(aes(38, 85, group=ID, colour=ID))
-    geom_boxplot() +
-    facet_wrap(~cancer_stage) +
-    xlab("Gene Name") +
-    ylab("Age of diagnosis per gene") +
-    ggtitle("Age of diagnosis per gene by gender and cancer stage") +
-    theme_bw() + # simplifies theme
-    theme(axis.text.x = # rotates x axis labels vertically
-            element_text(angle = 90,
-                         hjust = 1))
+# then we can use the `kable()` function to make a nicely formatted
+# markdown table
+age_30 %>%
+  kable()
+```
+
+
+```{r tester plot, echo=FALSE}
+
 ```
 
 ```{r anothertest}
-p <- ggplot(data = final_table, mapping = aes(age_at_diagnosis, cancer_stage))
+p <- ggplot(data = age_30, mapping = aes(mean_age, cancer_stage))
 p + geom_point(aes(color = gender)) + geom_smooth()
 ````
 
