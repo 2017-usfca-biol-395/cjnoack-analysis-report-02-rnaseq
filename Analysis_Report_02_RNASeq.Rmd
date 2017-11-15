@@ -103,7 +103,57 @@ age_15 %>%
     geom_jitter(width = 0.15, aes(color = cancer_stage))
 ```
 
-**Figure 1**: A figure showing 
+**Figure 1**: A figure showing the abundance of cancer stages against mean ages. We see stage 4 cancer most prevalent in males above 75 years old and in females about 50 years old.
+
+```{r make-summary-table, echo = FALSE}
+# There are many many genes in this dataset, so we can
+# subset it down to just a few here to look for interesting patterns
+# in the most highly expressed
+sexes_15 <- final_table %>%
+  group_by(cancer_stage, gender, smoking_status) %>%
+  summarize(mean_age = mean(age_at_diagnosis)) %>%
+  arrange(desc(mean_age)) %>%
+  head(n = 15)
+
+# then we can use the `kable()` function to make a nicely formatted
+# markdown table
+sexes_15 %>%
+  kable()
+```
+
+**Table 2**: A table now including smoking status of only females commpared with mean age and cancer stage.
+
+```{r make-boxplot-of-highly-expressed-genes, echo = FALSE}
+# here we just want to pull out the unique gene names and turn
+# them into a vector so we can use it below to make a boxplot
+# we use the pull() funtion to get this as a vector, just like
+# we did when making histograms several weeks ago
+sexes_15 %>%
+  ungroup() %>%
+  select(gender) %>%
+  unique() %>%
+  pull()
+
+# now we need to filter from the full data set again, because
+# we don't just want summary data, we want all the data in
+# order to make boxplots
+final_table %>%
+  filter(gender %in% top_sexes) %>%
+  ggplot(aes(x = smoking_status,
+             y = age_at_diagnosis,
+             fill = cancer_stage)) +
+    geom_boxplot() +
+    facet_wrap(~gender) +
+    xlab("Gene Name") +
+    ylab("Age of diagnosis per gene") +
+    ggtitle("Age of diagnosis per gene by gender and cancer stage") +
+    theme_bw() + # simplifies theme
+    theme(axis.text.x = # rotates x axis labels vertically
+            element_text(angle = 90,
+                         hjust = 1))
+```
+
+**Figure 2**: 
 
 ```{r make-summary-table, echo = FALSE}
 # There are many many genes in this dataset, so we can
