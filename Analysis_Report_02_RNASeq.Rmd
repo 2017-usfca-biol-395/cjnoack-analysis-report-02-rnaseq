@@ -78,7 +78,7 @@ stopifnot(exists("final_table"))
 # There are many many genes in this dataset, so we can
 # subset it down to just a few here to look for interesting patterns
 # in the most highly expressed
-age_30 <- final_table %>%
+age_15 <- final_table %>%
   group_by(cancer_stage, gender) %>%
   summarize(mean_age = mean(age_at_diagnosis)) %>%
   arrange(desc(mean_age)) %>%
@@ -86,11 +86,24 @@ age_30 <- final_table %>%
 
 # then we can use the `kable()` function to make a nicely formatted
 # markdown table
-age_30 %>%
+age_15 %>%
   kable()
 ```
 
 **Table 1**: A table of the mean ages for the different categories of cancer stages and gender. The eldest, 75 years old, typically will be a male with stage 4 cancer. The youngest (although not the youngest of all metadata) is 50 years old females with stage 4. 
+
+```{r make-barplot-of-highly-expressed-genes, echo = FALSE}
+# this code uses the same data as above, but use it to make a
+# barplot - remember geom_col() is just like
+# when you use geom_bar(stat = "identity")
+age_15 %>%
+  ggplot(aes(x = gender,
+             y = mean_age,
+             fill = cancer_stage)) +
+    geom_jitter(width = 0.15, aes(color = cancer_stage))
+```
+
+**Figure 1**: A figure showing 
 
 ```{r make-summary-table, echo = FALSE}
 # There are many many genes in this dataset, so we can
@@ -154,17 +167,6 @@ final_table %>%
 ```
 
 **Figure 2**: Here we show another example figure caption.
-
-```{r make-barplot-of-highly-expressed-genes, echo = FALSE}
-# this code uses the same data as above, but use it to make a
-# barplot - remember geom_col() is just like
-# when you use geom_bar(stat = "identity")
-age_30 %>%
-  ggplot(aes(x = gender,
-             y = mean_age,
-             fill = cancer_stage)) +
-    geom_col(position = "dodge")
-```
 
 **Figure 3**: Seeing how it goes.
 
