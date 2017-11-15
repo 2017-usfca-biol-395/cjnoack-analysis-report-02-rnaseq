@@ -7,15 +7,17 @@ bibliography: references.bib
 csl: bioinformatics.csl
 ---
 
-*Overall, a single-spaced page is about 500 words. So if the guidelines say half of a page, think about writing around 250 words. You can use the wordcountaddin in RStudio to track your progress.*
-
 # Introduction
 
-Smoking....
+Smoking is a prevalent habit with dire consequences. Evidence of smoking's effects became evident beginning as early as the 1930's. Since then, it is common knowledge. Not all lung cancers are the same. For example, non small cell lung adenocarcinoma (NSCLC) accounts for 85% of lung cancers. Of those who have NSCLC, only about 15% survive five years post-diagnosis [@ettinger2010non]. Thus, not only does lung cancer clearly have a deadly consequence, but it is the most fatal cancer 
 
-Is there a genetic component making females more prone to lung adenocarcinoma than males? I hypothesize given previous data that younger females and males will have cases of later stage cancer while those who do or previously smoked will show more recent stages.  
+But one component of lung cancer still leaves us worried. While the cancer is preventable by not having a tobacco habit, there is still a genetic component. In other words, even those who have never smoked can still get non small cell lung adenocarcinoma. Of the known carcinogens in cigarettes, they convert to reactive metabolites. If not inactivated, they can bind to cellular DNA and form adducts, a product of added molecules to create a distinct molecular species [@zienolddiny2005polymorphisms]. The large adducts which form typically get repaired, however researchers find that lung cancer patients have low DNA repair capacity. Zienolddiny et al. state that "variant DNA repair genotypes may alter susceptibility to lung cancer", indicating a genetic component within the repair mechanism, making certain persons more susceptible to lung cancer despite smoking or not smoking (2005). 
 
-Add about 1 page here. Must cite at least 5 peer reviewed articles.
+Thus, if smoking is not only caused by habits, but there is also a genetic component, it leads me to wonder if females and males differ in this genetic component? Can sex be a factor when it comes to the genetic quality of DNA repair mechanisms and thus carry on genes influencing the progression of lung cancer? In addition, will the age of certain females and males be a factor in terms of which stage of lung cancer they get diagnosed? For example, is it primarily younger non-smoker females/males with severe cases of lung cancer, or, more predictably, is it those whom are younger, non-smokers whom have stage 1? 
+
+These questions must take into account the anthropological effects of habits/genetics on females and males. In some countries, smoking is looked down upon more than others. Also in some countries, women and men are expected to have different habits. Thus, in order to answer these questions I will have to look at data from one area. In this case, studies done on Korean patients will be used in order to answer our questions. Korea is known for many prevalent cancers which are not pertained to the lunch, such as stomach, colon/rectal, and thyroid among both sexes. However, lung cancer is still the most deadly, accounting for 15,623 deaths in 2010 [@jung2013cancer]. With this known, I will use data from the Seo et al. and Li et al. studies in order to better answer these questions connecting sex to the genetic components of lung cancer and its severity for non-smokers. 
+
+I hypothesize that those whom are younger non-smokers will have lower cancer stages than those who are older smokers. In addition, I argue that females will have a higher genetic component than men (indicating cancer from non-smoking rather than smoking) given the cultural context. 
 
 # Methods
 
