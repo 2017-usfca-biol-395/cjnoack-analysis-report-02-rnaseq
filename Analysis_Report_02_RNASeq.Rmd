@@ -184,6 +184,17 @@ smoke_30 %>%
 
 **Table 3**: Mean smoking age compared with smoking status, gender, and cancer stage. We see primarily older females having stage 1A while younger females have stage 4, which is odd/surprising. Meanwhile, we see older males having 3A and younger males having 3B, making them closer in range than females. 
 
+```{r make-barplot-of-highly-expressed-genes, echo = FALSE}
+# this code uses the same data as above, but use it to make a
+# barplot - remember geom_col() is just like
+# when you use geom_bar(stat = "identity")
+smoke_30 %>%
+  ggplot(aes(x = cancer_stage,
+             y = smoking_status,
+             fill = gender)) +
+    geom_col(position = "dodge")
+```
+
 # Discussion
 
 1-2 pages is 500 to 1,000 words. 
