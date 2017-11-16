@@ -74,7 +74,7 @@ names(final_table) %<>% tolower
 stopifnot(exists("final_table"))
 ```
 
-```{r make-summary-table, echo = FALSE}
+```{r make-meanage-table, echo = FALSE}
 # There are many many genes in this dataset, so we can
 # subset it down to just a few here to look for interesting patterns
 # in the most highly expressed
@@ -92,7 +92,7 @@ age_15 %>%
 
 **Table 1**: A table of the mean ages for the different categories of cancer stages and gender. The eldest, 75 years old, typically will be a male with stage 4 cancer. The youngest (although not the youngest of all metadata) is 50 years old females with stage 4. 
 
-```{r make-barplot-of-highly-expressed-genes, echo = FALSE}
+```{r make-barplot-of-meanage, echo = FALSE}
 # this code uses the same data as above, but use it to make a
 # barplot - remember geom_col() is just like
 # when you use geom_bar(stat = "identity")
@@ -105,57 +105,51 @@ age_15 %>%
 
 **Figure 1**: A figure showing the abundance of cancer stages against mean ages. We see stage 4 cancer most prevalent in males above 75 years old and in females about 50 years old.
 
-```{r make-summary-table, echo = FALSE}
+```{r make-smokingstatus-table, echo = FALSE}
 # There are many many genes in this dataset, so we can
 # subset it down to just a few here to look for interesting patterns
 # in the most highly expressed
-sexes_15 <- final_table %>%
-  group_by(cancer_stage, gender, smoking_status) %>%
+smoke_30 <- final_table %>%
+  group_by(smoking_status, gender, cancer_stage) %>%
   summarize(mean_age = mean(age_at_diagnosis)) %>%
   arrange(desc(mean_age)) %>%
-  head(n = 15)
+   head(n = 30)
 
 # then we can use the `kable()` function to make a nicely formatted
 # markdown table
-sexes_15 %>%
+smoke_30 %>%
   kable()
 ```
 
-**Table 2**: A table now including smoking status of only females commpared with mean age and cancer stage.
+**Table 2**: A more detailed table indicating smoking status of the average oldest and youngest females within the scope of the metadata.
 
-```{r make-boxplot-of-highly-expressed-genes, echo = FALSE}
-# here we just want to pull out the unique gene names and turn
-# them into a vector so we can use it below to make a boxplot
-# we use the pull() funtion to get this as a vector, just like
-# we did when making histograms several weeks ago
-sexes_15 %>%
-  ungroup() %>%
-  select(gender) %>%
-  unique() %>%
-  pull()
-
-# now we need to filter from the full data set again, because
-# we don't just want summary data, we want all the data in
-# order to make boxplots
-final_table %>%
-  filter(gender %in% top_sexes) %>%
+```{r make-barplot-of-smokingstatus, echo = FALSE}
+# this code uses the same data as above, but use it to make a
+# barplot - remember geom_col() is just like
+# when you use geom_bar(stat = "identity")
+smoke_30 %>%
   ggplot(aes(x = smoking_status,
-             y = age_at_diagnosis,
-             fill = cancer_stage)) +
-    geom_boxplot() +
-    facet_wrap(~gender) +
-    xlab("Gene Name") +
-    ylab("Age of diagnosis per gene") +
-    ggtitle("Age of diagnosis per gene by gender and cancer stage") +
-    theme_bw() + # simplifies theme
-    theme(axis.text.x = # rotates x axis labels vertically
-            element_text(angle = 90,
-                         hjust = 1))
+             y = mean_age,
+             fill = gender)) +
+    geom_col(position = "dodge")
 ```
 
-**Figure 2**: 
+**Figure 2**: Using a figure to visualize smoking status between females and males based on average ages. 
 
-```{r make-summary-table, echo = FALSE}
+```{r make-pointplot-of-smokingstatus, echo = FALSE}
+# this code uses the same data as above, but use it to make a
+# barplot - remember geom_col() is just like
+# when you use geom_bar(stat = "identity")
+smoke_30 %>%
+  ggplot(aes(x = smoking_status,
+             y = mean_age,
+             fill = gender)) +
+    geom_point(aes (shape = gender))
+```
+
+**Figure 3**: Another visualization.
+
+```{r make-gene-table, echo = FALSE}
 # There are many many genes in this dataset, so we can
 # subset it down to just a few here to look for interesting patterns
 # in the most highly expressed
@@ -171,7 +165,7 @@ top_15 %>%
   kable()
 ```
 
-**Table 1**: The most highly expressed genes in both genders included *SFTPB* and *EEF1A1*.
+**Table 3**: Gene names in top 15.
 
 ```{r make-barplot-of-highly-expressed-genes, echo = FALSE}
 # this code uses the same data as above, but use it to make a
@@ -184,7 +178,7 @@ top_15 %>%
     geom_col(position = "dodge")
 ```
 
-**Figure 1**: Here we show an example figure caption.
+**Figure 4**: Genes by gender
 
 ```{r make-boxplot-of-highly-expressed-genes, echo = FALSE}
 # here we just want to pull out the unique gene names and turn
@@ -206,7 +200,7 @@ final_table %>%
              y = age_at_diagnosis,
              fill = gender)) +
     geom_boxplot() +
-    facet_wrap(~cancer_stage) +
+    facet_wrap(~smoking_status) +
     xlab("Gene Name") +
     ylab("Age of diagnosis per gene") +
     ggtitle("Age of diagnosis per gene by gender and cancer stage") +
@@ -216,38 +210,7 @@ final_table %>%
                          hjust = 1))
 ```
 
-**Figure 2**: Here we show another example figure caption.
-
-**Figure 3**: Seeing how it goes.
-
-```{r make-summary-table, echo = FALSE}
-# There are many many genes in this dataset, so we can
-# subset it down to just a few here to look for interesting patterns
-# in the most highly expressed
-smoke_30 <- final_table %>%
-  group_by(smoking_status, gender, cancer_stage) %>%
-  summarize(mean_smoke = mean(age_at_diagnosis)) %>%
-  arrange(desc(mean_smoke)) %>%
-  head(n = 30)
-
-# then we can use the `kable()` function to make a nicely formatted
-# markdown table
-smoke_30 %>%
-  kable()
-```
-
-**Table 3**: Mean smoking age compared with smoking status, gender, and cancer stage. We see primarily older females having stage 1A while younger females have stage 4, which is odd/surprising. Meanwhile, we see older males having 3A and younger males having 3B, making them closer in range than females. 
-
-```{r make-barplot-of-highly-expressed-genes, echo = FALSE}
-# this code uses the same data as above, but use it to make a
-# barplot - remember geom_col() is just like
-# when you use geom_bar(stat = "identity")
-smoke_30 %>%
-  ggplot(aes(x = cancer_stage,
-             y = smoking_status,
-             fill = gender)) +
-    geom_col(position = "dodge")
-```
+**Figure 5**:
 
 # Discussion
 
