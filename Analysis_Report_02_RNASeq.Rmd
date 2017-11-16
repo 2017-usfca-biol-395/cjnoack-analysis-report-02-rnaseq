@@ -141,10 +141,10 @@ smoke_30 %>%
 # barplot - remember geom_col() is just like
 # when you use geom_bar(stat = "identity")
 smoke_30 %>%
-  ggplot(aes(x = smoking_status,
+  ggplot(aes(x = cancer_stage,
              y = mean_age,
              fill = gender)) +
-    geom_point(aes (shape = gender))
+    geom_point(size = 6, aes (shape = gender))
 ```
 
 **Figure 3**: Another visualization.
@@ -166,19 +166,6 @@ top_15 %>%
 ```
 
 **Table 3**: Gene names in top 15.
-
-```{r make-barplot-of-highly-expressed-genes, echo = FALSE}
-# this code uses the same data as above, but use it to make a
-# barplot - remember geom_col() is just like
-# when you use geom_bar(stat = "identity")
-top_15 %>%
-  ggplot(aes(x = gender,
-             y = mean_count,
-             fill = genename)) +
-    geom_col(position = "dodge")
-```
-
-**Figure 4**: Genes by gender
 
 ```{r make-boxplot-of-highly-expressed-genes, echo = FALSE}
 # here we just want to pull out the unique gene names and turn
@@ -210,12 +197,43 @@ final_table %>%
                          hjust = 1))
 ```
 
-**Figure 5**:
+**Figure 4**:
+
+```{r make-barplot-of-highly-expressed-genes, echo = FALSE}
+# this code uses the same data as above, but use it to make a
+# barplot - remember geom_col() is just like
+# when you use geom_bar(stat = "identity")
+top_15 %>%
+  ggplot(aes(x = gender,
+             y = mean_count,
+             fill = genename)) +
+    geom_col(position = "dodge")
+```
+
+**Figure 5**: Genes by gender
 
 # Discussion
 
-1-2 pages is 500 to 1,000 words. 
+**Findings**:  
 
-Add around 1-2 pages interpreting your results and considering future directions one might take in analyzing these data.
+My analysis of correlation between gender and cancer proclivity, using the Seo et al. and Li et al. data, shows results completely opposite of my hypothesis. 
+
+We see that a high abundance of young female patients had later stage lung cancer while older female patients had early stage lung cancer. Odd. However, similarly to my hypothesis, younger males had early stage lung cancers and older males had late stage lung cancer. Both females and males were similar for stages 1A, 1B and 2A (Figure 1).
+
+First, the conclusion with the males makes sense as it goes along with my hypothesis. I claimed that as you get older, the more likely you are to have later stage lung cancer than younger people. This is based off of uncontrolled cell growth and poor repair mechanisms as you age, a basic consequence of senescence. This is prevalent in this data set for specifically the oldest males having stage 4 lung cancer (Table 1, Figure 1). However, we do not see this pattern all across for males. In fact, we see the average 69 year old male has 2A and 68 year old male has 1B. Where we would expect stage 3B to be, amongst the eldest, is actually in the lowest mean age bracket of 52 years old (Table 1). 
+
+Females faced this same issue, except for stage 4. Thus, it's important to look at smoking status.
+
+Table 2 shows that for the young female Korean patients whom had stage 4, they claim to never smoke. It would be far too simple to argue that it's based on sampling bias. Rather, this is a crucial part of my analysis which will be developed later. Another important facet of Table 2 is that the youngest males with stage 3B cancer also claimed to never smoke. Interesting. While it's not stage 4, it appears that the propensity of never smoking and higher stage of cancer amongst younger patients is clear. Noteably in its accompanying figure, we see an almost equivalent age between females and males for never smokers. The abundance of an "unknown" category is definitely important to note, especially as its make-up is primarily males, however it does not serve a place for my analysis. Figure 3 shows something similar, however shows the cancer stages per mean age. A more distinct cluster of both males and females around the same age are within cancer stages 1B, N/A (differing from the N/A smoking status category), and 2A (Figure 3). We see the most drastic differences in mean age and cancer stage at, again, stage 4 and 3B. 1A also has variance between men and women, just not as significantly. 
+
+Given from the first portion of my analysis, it already clearly debunks my hypothesis that younger females and males will have lower stage cancer, when we see the opposite. This led me to ask which genes are responsible for the trend, which isn't an easy undertaking. 
+
+In Figure 4, we see 
+
+**Reasoning**: 
+
+One reason for this is that most cases are identified in the later stages, as symptoms are more clear (Kanwal et al.). Another possibility is that the genetic component is stronger or just as strong as the enviornmental component. In a twin study done by Ahlbom et al. revealed that smoking and genetics were not completely distinct; that the habit of smoking often affects familial patterns of lung cancer in twins. Twin studies (monozygotic and dyzigotic) have been shown to be previously beneficial when understanding cancer epidemiology [@kanwal2017familial]. 
+
+Lastly, the strange occurence of nonsmoker females, or simply the high abundance of nonsmoker females with lung cancer, indicates another worry; women getting secondhand smoke from their partners. In Korea, Jee et al. found that the rate of lung cancer is non smoking women was higher if their husbands smoked due to its secondhand nature. The results are jarring, however I am not quick to jump to that immediate conclusion. 
 
 # Sources Cited
