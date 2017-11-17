@@ -1,20 +1,20 @@
-Analysis Report 2: Your Title Here
+Analysis Report 2: The effects of lung adenocarcinoma on younger patients
 ================
 Chelsea Noack
-November 10, 2017
+November 17, 2017
 
 Introduction
 ============
 
-Smoking is a prevalent habit with dire consequences. Evidence of smoking's effects became evident beginning as early as the 1930's. Since then, it is common knowledge. Not all lung cancers are the same. For example, non small cell lung adenocarcinoma (NSCLC) accounts for 85% of lung cancers. Of those who have NSCLC, only about 15% survive five years post-diagnosis (Ettinger *et al.*, 2010). Thus, not only does lung cancer clearly have a deadly consequence, but it is the most fatal cancer
+Smoking is a common habit with dire consequences. Evidence of smoking's effects became evident beginning as early as the 1930's. Since then, it is common knowledge. Not all lung cancers are the same. For example, non small cell lung adenocarcinoma (NSCLC) accounts for 85% of lung cancers. Of those who have NSCLC, only about 15% survive five years post-diagnosis (Ettinger *et al.*, 2010). Thus, not only does lung cancer have a deadly consequence, but it is the most fatal.
 
-But one component of lung cancer still leaves us worried. While the cancer is preventable by not having a tobacco habit, there is still a genetic component. In other words, even those who have never smoked can still get non small cell lung adenocarcinoma. Of the known carcinogens in cigarettes, they convert to reactive metabolites. If not inactivated, they can bind to cellular DNA and form adducts, a product of added molecules to create a distinct molecular species (Zienolddiny *et al.*, 2005). The large adducts which form typically get repaired, however researchers find that lung cancer patients have low DNA repair capacity. Zienolddiny et al. state that "variant DNA repair genotypes may alter susceptibility to lung cancer", indicating a genetic component within the repair mechanism, making certain persons more susceptible to lung cancer despite smoking or not smoking (2005).
+But one component of lung cancer still leaves us worried. While the cancer is preventable by not having a tobacco habit, there is still a genetic component. In other words, even those who have never smoked can still get non small cell lung adenocarcinoma. Of the known carcinogens in cigarettes, they convert to reactive metabolites. When inactivated, they bind to cellular DNA and form adducts. Adduct are products of added molecules to create a distinct molecular species (Zienolddiny *et al.*, 2005). Large adducts typically get repaired. However, researchers find that not only cancer patients have low DNA repair capacity. Zienolddiny et al. state that "variant DNA repair genotypes may alter susceptibility to lung cancer" (2005). This indicates a genetic component within the repair mechanism. Some genotypes make people more susceptible to lung cancer despite habits (2005).
 
-Thus, if smoking is not only caused by habits, but there is also a genetic component, it leads me to wonder if females and males differ in this genetic component? Can sex be a factor when it comes to the genetic quality of DNA repair mechanisms and thus carry on genes influencing the progression of lung cancer? In addition, will the age of certain females and males be a factor in terms of which stage of lung cancer they get diagnosed? For example, is it primarily younger non-smoker females/males with severe cases of lung cancer, or, more predictably, is it those whom are younger, non-smokers whom have stage 1?
+Many questions arise if we look into the genetic component of lung adenocarcinoma. For example, do females and males differ in this genetic component? Sex and gender cause many differences... can this difference also be cancer susceptibility? Can someone's inheritance and sex carry on genes influencing DNA repair pathways? Will the age of certain females and males factor into which stage of lung cancer they get diagnosed? Is it primarily older non-smoker females/males with severe cases of lung cancer? Or, less predictably, do younger, non-smokers have accelerated stages of cancer?
 
-These questions must take into account the anthropological effects of habits/genetics on females and males. In some countries, smoking is looked down upon more than others. Also in some countries, women and men are expected to have different habits. Thus, in order to answer these questions I will have to look at data from one area. In this case, studies done on Korean patients will be used in order to answer our questions. Korea is known for many prevalent cancers which are not pertained to the lunch, such as stomach, colon/rectal, and thyroid among both sexes. However, lung cancer is still the most deadly, accounting for 15,623 deaths in 2010 (Jung *et al.*, 2013). With this known, I will use data from the Seo et al. and Li et al. studies in order to better answer these questions connecting sex to the genetic components of lung cancer and its severity for non-smokers.
+Any answer must take into account geographical and societal factors. In some countries, smoking is less approved than others. Also in some countries, society expects women to smoke less than men. To answer these questions, I will have to look at data from one area. In this case, Korea. Korea has many cancers besides lung such as stomach, colon/rectal, and thyroid. All cancers are prevalent in both sexes. However, lung cancer is still the most deadly. Lung cancer accounts for 15,623 deaths in 2010 (Jung *et al.*, 2013). Because lung cancer is also the most fatal in Korea, my analysis can shed light on a broad, global understanding.
 
-I hypothesize that those whom are younger non-smokers will have lower cancer stages than those who are older smokers. In addition, I argue that females will have a higher genetic component than men (indicating cancer from non-smoking rather than smoking) given the cultural context.
+I will use data from studies done by Seo et al. (2012) and Li et al. (2015) to better connect sex to the genetic components of lung cancer. In addition, I will attempt to understand genetics linked cancer severity for non-smokers. I hypothesize that younger, female non-smokers will have earlier/treatable cancer stages. Older, smoker males will have higher later stage cancers. Also, females will have a higher genetic component than men. The results of the study could indicate an important shift of understanding NSCLC. Once the genetic component is better analyzed, future generations can benefit. Thus, decreasing the death rates by lung cancer amongst the human, global population.
 
 Methods
 =======
@@ -22,25 +22,25 @@ Methods
 Sample origin and sequencing
 ----------------------------
 
-The data comes from Seo et al.'s 2012 paper *The transcriptional landscape and mutational profile of lung adenocarcinoma*. Seo et al. took fresh surgical samples of normal and cancerous tissues from 200 Korean patients. The patients had primary lung adenocarcinoma and recently underwent lung resection. For their transcriptional study between smokers and non-smokers, which pertains to Li et al.'s study, they used about 70 of those 200 samples. The samples were normal and cancerous tissues from 34 smokers and 34 never-smokers. Within the smoking category was current smoking and those whom have smoked. They also recorded gender, cancer stage, and smoking status from the patients (Seo *et al.*, 2012).
+Seo et al. took fresh surgical samples of normal and cancerous tissues from 200 Korean patients. The patients had primary lung adenocarcinoma and recently underwent lung resection. They performed a transcriptional study between smokers and non-smokers. They took 68 of the 200 samples, normal and cancerous tissues from 34 smokers and 34 never-smokers. A category based on smoking habits categorized the patients; current, previously, or never. They also recorded gender, and cancer stage from the patients (Seo *et al.*, 2012).
 
-To sequence the samples, they did transcriptome sequencing combine with whole-exome and transcriptome sequencing. Transcriptome sequencing has a past history of detecting somatic mutations in cancer. The combination made their study the first large scale-study of lung adenocarcinoma using RNA sequencing (Seo *et al.*, 2012).
+They did transcriptome sequencing combine with whole-exome and transcriptome sequencing. Transcriptome sequencing has a past history of detecting somatic mutations in cancer. Their study the first large-scale study of lung cancer using RNAseq (Seo *et al.*, 2012).
 
-Li et al. (2015) downloaded Seo et al.'s RNAseq data from GEO, Gene Expression Omnibus. In doing so, they could perform a comprehensive pair-wise comparison analysis. From the data, they had 14 billion paired-end sequence reads ranging to 101 bp in length (Li *et al.*, 2015). They excluded the data from any patients under the age of 75 for better comparison. Once they confirmed a paired-nature of the RNA-seq data of normal vs. tumor tissue, they used Ensembl GRCh37 Tophat to align the reads to the human genome. To count the reads by genes, they used HTSeq (Li *et al.*, 2015). For the differential gene expression analysis, they used R Bioconductor edgeR. Next, Li et al. had to filter the data. Genes with 1 count per million (cpm) in atleast half the sample size were included. From there, we took their edited and filtered data for our analysis.
+Li et al. (2015) downloaded Seo et al.'s RNAseq data from GEO, the Gene Expression Omnibus. GEO is a database for high-throughput gene expression data. In doing so, they could perform a comprehensive pair-wise comparison analysis. From the data, they had 14 billion paired-end sequence reads ranging to 101 bp in length (Li *et al.*, 2015). Next, they confirmed a paired-nature of the RNA-seq data of normal vs. tumor tissue. Once confirmed, they used Ensembl GRCh37 Tophat to align the reads to the human genome. To count the reads by genes, they used HTSeq (Li *et al.*, 2015). For the differential gene expression analysis, they used R Bioconductor edgeR. Finally, Li et al. had to filter the data. They included genes with 1 count per million (cpm) in at least half the sample size. From there, we took their edited and filtered data for our analysis.
 
 Computational
 -------------
 
-First, Dr. Napauka Zimmerman downloaded the files from the NCBI Sequence Read archive under the study number ERP001058. Downloaded the extensive amount of data was made easier by the BioMartr package. Biomartr is a package in CRAN which helps retrieve metagenomic data and functional annotation retrieval. It is more polished than NCBI. Next, the files were converted from SRA to fastq.
+First, Dr. Napauka Zimmerman downloaded the files (ERP001058), which came from the NCBI Sequence Read archive. BioMartr made it easier to download the large amounts of data. Biomartr is a package in CRAN. It retrieves metagenomic data and functional annotation retrieval. It is more polished than NCBI.
 
-Because the files were so massive, Zimmerman had to use Sailfish. Sailfish is a package which quantifies the abundance of previously annotated RNA isoforms from RNA-seq data, and in doing so avoids mapping reads (Patro *et al.*, 2014). This makes it 20 times faster than alternative methods and still maintains a level of accuracy. This is ideal for processing large amounts of sequencing reads. Once the files were processed, they were put through fastQC, a quality checking program, which eliminated many reads which were very low quality. The QC reports are helpful to see how viable each sequence is for analysis; if the majority of the sequence is above a 30 score, then we consider it to be sequenced well. Typically, the 3' end will deteriorate, which is normal.
+Next, the files converted from SRA to fastq. Because the files were so massive, Zimmerman had to use Sailfish. Sailfish is a package which quantifies the amount of already annotated RNA isoforms from RNA-seq data. In doing so, it avoids mapping reads (Patro *et al.*, 2014). This makes Sailfish 20 times faster than alternative methods, while maintaining accuracy. This is ideal for processing large amounts of sequencing reads.
 
-The next step was to put the files through paired-end Trimmomatic. Specifically, it clipped off Illumina adapters and any reads with a quality score less than 20. The trimmed, quality-checked sequences then needed to be aligned. Sailfish efficiently aligned the sequences using k-mers. As mentioned before, Sailfish is fast; each sample is parsed out. 88 cores were used in an overnight run. Finally, with parsed sequences efficiently aligned, Zimmerman built the tables. Within our table, each row is a human gene name and the column is different samples in all the groups. The table was melted so it included the metadata and original data. Dplyr and ggplot help us analyze the data from the melted tables.
+Zimmerman processed the files. Then, the files were quality checked. FastQC is a quality checking program which eliminates low quality reads. QC reports are helpful to see how viable each sequence is for analysis. If the majority of the sequence is above a 30 score, then it's sequenced well. Typically, the 3' end will deteriorate, which is normal.
+
+The next step was to put the files through paired-end Trimmomatic. Trimmomatic clipped off Illumina adapters and reads with quality scores less than 20. Once trimmed, Zimmerman aligned the sequences using Sailfish. Sailfish aligns sequences using k-mers. As mentioned before, Sailfish is fast. The program parsed each sample. 88 cores were used in an overnight run in order to perform the alignment. Finally, with parsed sequences aligned, Zimmerman built the tables. Within our table, each row is a human gene name and the column is different samples in all the groups. Zimmerman "melted" the table so it included the metadata and original data. Dplyr and ggplot help us analyze the data from the melted tables.
 
 Results
 =======
-
-In addition to a minimum of 4-5 figures/tables (and associated captions), you should include sufficient text in this section to describe what your findings were. Remember that in the results section you just describe what you found, but you don't interpret it - that happens in the discussion.
 
 | cancer\_stage | gender |  mean\_age|
 |:--------------|:-------|----------:|
@@ -101,9 +101,11 @@ In addition to a minimum of 4-5 figures/tables (and associated captions), you sh
 
 ![](Analysis_Report_02_RNASeq_files/figure-markdown_github-ascii_identifiers/make-barplot-of-smokingstatus-1.png)
 
-**Figure 2**: Using a figure to visualize smoking status between females and males based on average ages.
+**Figure 2**: A figure to visualize smoking status between females and males based on average ages.
 
 ![](Analysis_Report_02_RNASeq_files/figure-markdown_github-ascii_identifiers/make-pointplot-of-smokingstatus-1.png)
+
+**Figure 3**: The figure shows the abundance of females and males within certain cancer stages and mean ages. The clustering effect makes it visually better to understand than other figures.
 
 | gender | genename |  mean\_count|
 |:-------|:---------|------------:|
@@ -123,22 +125,46 @@ In addition to a minimum of 4-5 figures/tables (and associated captions), you sh
 | female | RNA28S5  |     58079.55|
 | male   | FTH1     |     52390.78|
 
-**Table 3**: Gene names in top 15.
-
-![](Analysis_Report_02_RNASeq_files/figure-markdown_github-ascii_identifiers/make-barplot-of-highly-expressed-genes-1.png)
-
-**Figure 3**: Genes by gender
+**Table 3**: A table with the top 15 genes found within the data's sampling of females and males.
 
 ![](Analysis_Report_02_RNASeq_files/figure-markdown_github-ascii_identifiers/make-boxplot-of-highly-expressed-genes-1.png)
 
-**Figure 4**:
+**Figure 4**: The figure shows the amount of the top 15 genes within the meta data of women and males correlated to smoking status and age of diagnosis.
+
+![](Analysis_Report_02_RNASeq_files/figure-markdown_github-ascii_identifiers/make-barplot-of-highly-expressed-genes-1.png)
+
+**Figure 5**: The figure shows the top 15 genes sorted by the sex/gender and mean count of the genes.
 
 Discussion
 ==========
 
-1-2 pages is 500 to 1,000 words.
+**Findings**:
 
-Add around 1-2 pages interpreting your results and considering future directions one might take in analyzing these data.
+My analysis of the correlation between sex/gender and cancer proclivity, using the Seo et al. and Li et al. data, shows results opposite of my hypothesis.
+
+We see from the data that a more young, female patients have later stage lung cancer. Older female patients have early stage lung cancer. Odd. Yet, younger males had early stage lung cancers and older males had late stage lung cancer. Both females and males were similar for stages 1A, 1B and 2A (Figure 1).
+
+First, the findings with the males makes sense, as it goes along with my hypothesis. I claimed that as you get older, the more likely you are to have later stage lung cancer than younger people. Uncontrolled cell growth and poor repair mechanisms increase as you age. The process is a basic consequence of senescence. We see in the data set that the oldest males having stage 4 lung cancer (Table 1, Figure 1). But we do not see this pattern all across for males.
+
+In fact, we see the average 69 year old male has stage 2A and 68 year old male has stage 1B. We predict that males in stage 3B would be the eldest, but in fact they were the lowest mean age, 52 years old (Table 1). Females face the same issue, except for stage 4. Thus, it's important to look at smoking status.
+
+Table 2 shows that for the young female Korean patients whom had stage 4 claim to never smoke. It would be far too simple to argue that it's based on sampling bias. Rather, this is a crucial part of my analysis which will developed later. The youngest males with stage 3B cancer also claim to never smoke (Table 2). Interesting. We see a clear connection between never smoking and higher stages of lung cancer in young patients.
+
+Noteably, in the accompanying Figure 2, we see females and males are similar in age for never smokers. This could be due to the sampling within the hospital.. regardless, the statistic is strange. In Figure 3, a more distinct cluster of both males and females around the same age are within similar cancer stages. The similar stages are 1B, N/A (differing from the N/A smoking status category), and 2A (Figure 3). We see the most drastic differences in mean age and cancer stage at, again, stage 4 and 3B. 1A also has variance between men and women, but not as significantly.
+
+We see from my analysis that being young does not mean you are exempt from later stage lung cancer. This leads me to ask which genes are responsible for the trend, which isn't an easy undertaking. In Figure 4, we attempt to find genes more common in certain age groups. However, we see that throughout most ages, all genes are playing a part. For never smokers, we see a smaller range than current smokers. We also see a slight skew to the left, identifying more outliers within the younger age groups. This does not help our analysis. If anything, the skew proposes new questions which need further research. Figure 4 does help us identify that most genes occur in lung cancer patients around 60-70 years old.
+
+Lastly, in Figure 5 we see a strange occurrence of three genes only in males. The genes are FN1, FTH1, and FTL. FN1 gene encodes for a heavy weight glycoprotein. It is crucial for the metastasis of melanoma cells (Ridley, 2000). FTH1 gene encodes for an iron storage factor. represses ferritin-H expression. Its up-regulation stimulates apoptosis triggered by the tumor necrosis factor (TNF) (Pham *et al.*, 2004). Phenotypes resulting from the FTL gene depends on where its mutation is. The gene most connected with iron regulation and cellular function (Sammarco *et al.*, 2008).
+
+Two genes found here might influence cancer, but I'm apprehensive to use these findings. Genes, generally, are in many processes. These genes might be indicative of male cancer patients, but they also might be indicative of general Korean male health. Thus, while the findings are interesting, I will not develop them further here.
+
+**Conclusion**:
+
+Symptoms are more clear in later stage cancer. This could be the reason we see more people with later stage despite age difference. The genetic component might be stronger, or as strong, as the environmental component.
+
+In a twin study done by Ahlbom et al., smoking and genetics were not completely distinct (1997). The habit of smoking often affects familial patterns of lung cancer in twins. The large amount of nonsmoker females with lung cancer indicates another worry. That is that women are getting secondhand smoke from their partners. In Korea, Jee et al. found that the rate of lung cancer is non smoking women was higher if their husbands smoked. This was due to its secondhand nature (1999). The results are jarring. We cannot say this is the answer, but we need more genetic and anthropological studies.
+
+The findings found from more research could end up benefitting people around the world with lung cancer. The power of secondhand smoke, from the data, appears to be immense. Equally immense appears to be the genetic component of passing on carcinogens to your offspring. The knowledge found here and in similar studies has the propensity to save future lives.
 
 Sources Cited
 =============
@@ -150,6 +176,12 @@ Jung,K.-W. *et al.* (2013) Cancer statistics in korea: Incidence, mortality, sur
 Li,Y. *et al.* (2015) RNA-seq analysis of lung adenocarcinomas reveals different gene expression profiles between smoking and nonsmoking patients. *Tumor Biology*, **36**, 8993–9003.
 
 Patro,R. *et al.* (2014) Sailfish enables alignment-free isoform quantification from rna-seq reads using lightweight algorithms. *Nature biotechnology*, **32**, 462–464.
+
+Pham,C.G. *et al.* (2004) Ferritin heavy chain upregulation by nf-*κ*b inhibits tnf*α*-induced apoptosis by suppressing reactive oxygen species. *Cell*, **119**, 529–542.
+
+Ridley,A. (2000) Cancer: Molecular switches in metastasis. *Nature*, **406**, 466–467.
+
+Sammarco,M.C. *et al.* (2008) Ferritin l and h subunits are differentially regulated on a post-transcriptional level. *Journal of Biological Chemistry*, **283**, 4578–4587.
 
 Seo,J.-S. *et al.* (2012) The transcriptional landscape and mutational profile of lung adenocarcinoma. *Genome research*, **22**, 2109–2119.
 
