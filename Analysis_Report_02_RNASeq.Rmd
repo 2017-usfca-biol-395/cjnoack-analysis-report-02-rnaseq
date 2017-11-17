@@ -1,7 +1,7 @@
 ---
 title: "Analysis Report 2: Your Title Here"
 author: "Chelsea Noack"
-date: "November 10, 2017"
+date: "November 16, 2017"
 output: github_document
 bibliography: references.bib
 csl: bioinformatics.csl
@@ -216,24 +216,30 @@ top_15 %>%
 
 **Findings**:  
 
-My analysis of correlation between gender and cancer proclivity, using the Seo et al. and Li et al. data, shows results completely opposite of my hypothesis. 
+My analysis of the correlation between sex/gender and cancer proclivity, using the Seo et al. and Li et al. data, shows results opposite of my hypothesis. 
 
-We see that a high abundance of young female patients had later stage lung cancer while older female patients had early stage lung cancer. Odd. However, similarly to my hypothesis, younger males had early stage lung cancers and older males had late stage lung cancer. Both females and males were similar for stages 1A, 1B and 2A (Figure 1).
+We see from the data that a more young, female patients have later stage lung cancer. Older female patients have early stage lung cancer. Odd. Yet, younger males had early stage lung cancers and older males had late stage lung cancer. Both females and males were similar for stages 1A, 1B and 2A (Figure 1).
 
-First, the conclusion with the males makes sense as it goes along with my hypothesis. I claimed that as you get older, the more likely you are to have later stage lung cancer than younger people. This is based off of uncontrolled cell growth and poor repair mechanisms as you age, a basic consequence of senescence. This is prevalent in this data set for specifically the oldest males having stage 4 lung cancer (Table 1, Figure 1). However, we do not see this pattern all across for males. In fact, we see the average 69 year old male has 2A and 68 year old male has 1B. Where we would expect stage 3B to be, amongst the eldest, is actually in the lowest mean age bracket of 52 years old (Table 1). 
+First, the findings with the males makes sense, as it goes along with my hypothesis. I claimed that as you get older, the more likely you are to have later stage lung cancer than younger people. Uncontrolled cell growth and poor repair mechanisms increase as you age. The process is a basic consequence of senescence. We see in the data set that the oldest males having stage 4 lung cancer (Table 1, Figure 1). But we do not see this pattern all across for males. 
 
-Females faced this same issue, except for stage 4. Thus, it's important to look at smoking status.
+In fact, we see the average 69 year old male has stage 2A and 68 year old male has stage 1B. We predict that males in stage 3B would be the eldest, but in fact they were the lowest mean age, 52 years old (Table 1). Females face the same issue, except for stage 4. Thus, it's important to look at smoking status.
 
-Table 2 shows that for the young female Korean patients whom had stage 4, they claim to never smoke. It would be far too simple to argue that it's based on sampling bias. Rather, this is a crucial part of my analysis which will be developed later. Another important facet of Table 2 is that the youngest males with stage 3B cancer also claimed to never smoke. Interesting. While it's not stage 4, it appears that the propensity of never smoking and higher stage of cancer amongst younger patients is clear. Noteably in its accompanying figure, we see an almost equivalent age between females and males for never smokers. The abundance of an "unknown" category is definitely important to note, especially as its make-up is primarily males, however it does not serve a place for my analysis. Figure 3 shows something similar, however shows the cancer stages per mean age. A more distinct cluster of both males and females around the same age are within cancer stages 1B, N/A (differing from the N/A smoking status category), and 2A (Figure 3). We see the most drastic differences in mean age and cancer stage at, again, stage 4 and 3B. 1A also has variance between men and women, just not as significantly. 
+Table 2 shows that for the young female Korean patients whom had stage 4  claim to never smoke. It would be far too simple to argue that it's based on sampling bias. Rather, this is a crucial part of my analysis which will developed later. The youngest males with stage 3B cancer also claim to never smoke (Table 2). Interesting. We see a clear connection between never smoking and higher stages of lung cancer in young patients.
 
-Given from the first portion of my analysis, it already clearly debunks my hypothesis that younger females and males will have lower stage cancer, when we see the opposite. This led me to ask which genes are responsible for the trend, which isn't an easy undertaking. 
+Noteably, in the accompanying Figure 2, we see females and males are similar in age for never smokers. This could be due to the sampling within the hospital.. regardless, the statistic is strange. In Figure 3, a more distinct cluster of both males and females around the same age are within similar cancer stages. The similar stages are 1B, N/A (differing from the N/A smoking status category), and 2A (Figure 3). We see the most drastic differences in mean age and cancer stage at, again, stage 4 and 3B. 1A also has variance between men and women, but not as significantly. 
 
-In Figure 4, we see 
+We see from my analysis that being young does not mean you are exempt from later stage lung cancer. This leads me to ask which genes are responsible for the trend, which isn't an easy undertaking. In Figure 4, we attempt to find genes more common in certain age groups. However, we see that throughout most ages, all genes are playing a part. For never smokers, we see a smaller range than current smokers. We also see a slight skew to the left, identifying more outliers within the younger age groups. This does not help our analysis. If anything, the skew proposes new questions which need further research. Figure 4 does help us identify that most genes occur in lung cancer patients around 60-70 years old.
 
-**Reasoning**: 
+Lastly, in Figure 5 we see a strange occurrence of three genes only in males. The genes are FN1, FTH1, and FTL. FN1 gene encodes for a heavy weight glycoprotein. It is crucial for the metastasis of melanoma cells [@ridley2000cancer]. FTH1 gene encodes for an iron storage factor.  represses ferritin-H expression. Its up-regulation stimulates apoptosis triggered by the tumor necrosis factor (TNF) [@pham2004ferritin]. Phenotypes resulting from the FTL gene depends on where its mutation is. The gene most connected with iron regulation and cellular function [@sammarco2008ferritin]. 
 
-One reason for this is that most cases are identified in the later stages, as symptoms are more clear (Kanwal et al.). Another possibility is that the genetic component is stronger or just as strong as the enviornmental component. In a twin study done by Ahlbom et al. revealed that smoking and genetics were not completely distinct; that the habit of smoking often affects familial patterns of lung cancer in twins. Twin studies (monozygotic and dyzigotic) have been shown to be previously beneficial when understanding cancer epidemiology [@kanwal2017familial]. 
+Two genes found here might influence cancer, but I'm apprehensive to use these findings. Genes, generally, are in many processes. These genes might be indicative of male cancer patients, but they also might be indicative of general Korean male health. Thus, while the findings are interesting, I will not develop them further here. 
 
-Lastly, the strange occurence of nonsmoker females, or simply the high abundance of nonsmoker females with lung cancer, indicates another worry; women getting secondhand smoke from their partners. In Korea, Jee et al. found that the rate of lung cancer is non smoking women was higher if their husbands smoked due to its secondhand nature. The results are jarring, however I am not quick to jump to that immediate conclusion. 
+**Conclusion**: 
+
+Symptoms are more clear in later stage cancer. This could be the reason we see more people with later stage despite age difference. The genetic component might be stronger, or as strong, as the environmental component. 
+
+In a twin study done by Ahlbom et al., smoking and genetics were not completely distinct (1997). The habit of smoking often affects familial patterns of lung cancer in twins. The large amount of nonsmoker females with lung cancer indicates another worry.  That is that women are getting secondhand smoke from their partners. In Korea, Jee et al. found that the rate of lung cancer is non smoking women was higher if their husbands smoked. This was due to its secondhand nature (1999). The results are jarring. We cannot say this is the answer, but we need more genetic and anthropological studies. 
+
+The findings found from more research could end up benefitting people around the world with lung cancer. The power of secondhand smoke, from the data, appears to be immense. Equally immense appears to be the genetic component of passing on carcinogens to your offspring. The knowledge found here and in similar studies has the propensity to save future lives. 
 
 # Sources Cited
