@@ -134,7 +134,7 @@ smoke_30 %>%
     geom_col(position = "dodge")
 ```
 
-**Figure 2**: Using a figure to visualize smoking status between females and males based on average ages. 
+**Figure 2**: A figure to visualize smoking status between females and males based on average ages. 
 
 ```{r make-pointplot-of-smokingstatus, echo = FALSE}
 # this code uses the same data as above, but use it to make a
@@ -147,7 +147,7 @@ smoke_30 %>%
     geom_point(size = 6, aes (shape = gender))
 ```
 
-**Figure 3**: Another visualization.
+**Figure 3**: The figure shows the abundance of females and males within certain cancer stages and mean ages. The clustering effect makes it visually better to understand than other figures.
 
 ```{r make-gene-table, echo = FALSE}
 # There are many many genes in this dataset, so we can
@@ -165,7 +165,7 @@ top_15 %>%
   kable()
 ```
 
-**Table 3**: Gene names in top 15.
+**Table 3**: A table with the top 15 genes found within the data's sampling of females and males.
 
 ```{r make-boxplot-of-highly-expressed-genes, echo = FALSE}
 # here we just want to pull out the unique gene names and turn
@@ -190,14 +190,14 @@ final_table %>%
     facet_wrap(~smoking_status) +
     xlab("Gene Name") +
     ylab("Age of diagnosis per gene") +
-    ggtitle("Age of diagnosis per gene by gender and cancer stage") +
+    ggtitle("Age of diagnosis per gene by gender and smoking status") +
     theme_bw() + # simplifies theme
     theme(axis.text.x = # rotates x axis labels vertically
             element_text(angle = 90,
                          hjust = 1))
 ```
 
-**Figure 4**:
+**Figure 4**: The figure shows the amount of the top 15 genes within the meta data of women and males correlated to smoking status and age of diagnosis.
 
 ```{r make-barplot-of-highly-expressed-genes, echo = FALSE}
 # this code uses the same data as above, but use it to make a
@@ -210,7 +210,7 @@ top_15 %>%
     geom_col(position = "dodge")
 ```
 
-**Figure 5**: Genes by gender
+**Figure 5**: The figure shows the top 15 genes sorted by the sex/gender and mean count of the genes.
 
 # Discussion
 
