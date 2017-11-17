@@ -144,7 +144,7 @@ smoke_30 %>%
   ggplot(aes(x = cancer_stage,
              y = mean_age,
              fill = gender)) +
-    geom_point(size = 6, aes (shape = gender))
+    geom_point(size = 6, aes(shape = gender))
 ```
 
 **Figure 3**: The figure shows the abundance of females and males within certain cancer stages and mean ages. The clustering effect makes it visually better to understand than other figures.
