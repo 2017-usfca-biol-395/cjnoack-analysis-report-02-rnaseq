@@ -1,7 +1,7 @@
 ---
-title: "Analysis Report 2: Your Title Here"
+title: "Analysis Report 2: The effects of lung adenocarcinoma on younger patients"
 author: "Chelsea Noack"
-date: "November 16, 2017"
+date: "November 17, 2017"
 output: github_document
 bibliography: references.bib
 csl: bioinformatics.csl
